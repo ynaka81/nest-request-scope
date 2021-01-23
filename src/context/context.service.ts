@@ -2,7 +2,7 @@ import { Injectable, Scope } from '@nestjs/common';
 
 @Injectable({ scope: Scope.REQUEST })
 export class ContextService {
-  private readonly context: Record<string, unknown> = {};
+  private context: Record<string, unknown> = {};
 
   set(key: string, value: any): void {
     this.context[key] = value;
